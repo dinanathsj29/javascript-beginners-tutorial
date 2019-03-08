@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>13.02.03.js.event.form.html</title>
+
+    <!-- internal style -->
+    <style>
+      /* css selector: { property:value; } */
+      body {
+        font-family: arial;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    
+    <div class="container">
+
+      <div class="sub-container">
+
+        <h1 class="heading-text" id="mainHeadingText">13. Events</h1>
+
+        <h2>13.01. Understanding Events and Event Handlers</h2>
+        <li>Events are happening/triggering all over, Event lets the developer know `something has occurred/happened`</li>
+        <li>Events occur when the page loads (Onload), when user interact with the web page (clicked a link or button / hover) (onlick), pressed key, moved the mouse pointer, mouse-clicked/hover (onmouseover), entered text into an input box or textarea (onchange,onblur, onfocus), submits a form (submit), page unloads (unload)</li>
+        <li>When an event occur, use a JavaScript `event handler (or an event listener) to detect` them and perform specific task - Event handlers name always begin with the word `"on"`, like onclick, onload, onblur, and so on.</li>
+        <li>To react to an event you `listen` for it and supply a `callback function or event handler` which will be called by the browser when the event occurs</li>
+
+        <h2>13.02. Different Event category</h2>
+
+        <ul>
+          <li>Mouse events</li>
+          <li>Keyboard events</li>
+          <li>Form events</li>
+          <li>Document/Window events</li>
+        </ul>
+
+        <h2>13.02.03. Form events</h2>
+        A form event is triggered when a form control/form fields (text fields/radio buttons/checkbox) receives or loses focus or when the user modify a form control value by typing text in a text input, select any option in a dropdown/select box etc. Lets look into some of most important form events and their event handler:
+        
+        <ol class="normalList">
+          <li><strong>focus</strong> (`onfocus` event handler) <br/>
+            Occurs when the user focuses on an element on a web page, e.g. on an `input` text field</li>
+          <li><strong>blur</strong> (`onblur` event handler) <br/>
+            Occurs when the user takes the focus away from a form element or a window</li>
+          <li><strong>change</strong> (`onchange` event handler) <br/>
+            Occurs when the user changes the value of a form element/fields</li>
+          <li><strong>submit</strong> (`onsubmit` event handler) <br/>
+            Occurs only when the user submits a form on a web page</li>
+        </ol>
+
+        <form action="" method="post" onsubmit="alert('Form data submitted to the server!');">
+
+          <label>First Name:</label>
+          <input type="text" name="first-name" onfocus="showHighlight(this)" onblur="resetHighlight(this)" required> <br/> <br/>
+
+          <select onchange="console.log('You have selected something!');">
+              <option>Select</option>
+              <option>Male</option>
+              <option>Female</option>
+          </select> <br/> <br/>
+
+          <input type="submit" value="Submit">
+          
+        </form>
+
+      </div>
+
+    </div>
+
+    <script>
+
+       // focus text field
+
+      function showHighlight(curTxtField) {
+        curTxtField.style.background = "pink";
+      }
+
+      function resetHighlight(curTxtField) {
+        curTxtField.style.background = "white";
+      }
+      
+    </script>
+    
+  </body>
+
+</html>

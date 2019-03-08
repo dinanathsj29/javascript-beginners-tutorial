@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>13.03.01.js.event.html.attr.click.html</title>
+
+    <!-- internal style -->
+    <style>
+      /* css selector: { property:value; } */
+      body {
+        font-family: arial;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    
+    <div class="container">
+
+      <div class="sub-container">
+
+        <h1 class="heading-text" id="mainHeadingText">13. Events</h1>
+
+        <h2>13.01. Understanding Events and Event Handlers</h2>
+        <li>Events are happening/triggering all over, Event lets the developer know `something has occurred/happened`</li>
+        <li>Events occur when the page loads (Onload), when user interact with the web page (clicked a link or button / hover) (onlick), pressed key, moved the mouse pointer, mouse-clicked/hover (onmouseover), entered text into an input box or textarea (onchange,onblur, onfocus), submits a form (submit), page unloads (unload)</li>
+        <li>When an event occur, use a JavaScript `event handler (or an event listener) to detect` them and perform specific task - Event handlers name always begin with the word `"on"`, like onclick, onload, onblur, and so on.</li>
+        <li>To react to an event you `listen` for it and supply a `callback function or event handler` which will be called by the browser when the event occurs</li>
+
+        <h2>13.02. Different Event category</h2>
+
+        <ul>
+          <li>Mouse events</li>
+          <li>Keyboard events</li>
+          <li>Form events</li>
+          <li>Document/Window events</li>
+        </ul>
+
+        <h2>13.03. Different ways to write the event handler</h2>
+
+        <ol class="normalList">
+          <li>HTML Attribute</li>
+          <li>DOM element properties (anonymous function)</li>
+          <li>Registering event listeners (Professional Method (add and remove listeners))</li>
+        </ol>
+
+        <h2 onclick="window.alert('HTML attribute onclick used here!')" style="color:#0000ff; cursor:pointer">13.03.01. HTML attribute | Click Me!</h2>
+        
+        <ul class="normalList">
+          <li>button onclick="alert('Hello world! Welcome to JavaScript Events!!')" Click here... /button </li>
+          <li>Note: his way should be avoided as it makes markup less readable and making it harder to find if there is any bug.</li>
+        </ul>
+
+        <button onclick="alert('Hello world! Welcome to JavaScript Events!!')">Click here...</button>
+        <button onclick="fnShowMessage()">Invoke Function</button>
+
+        <!-- include external JavaScript - body section -->
+        <script src="./13.03.01.script.js"></script>
+
+      </div>
+
+    </div>
+    
+  </body>
+
+</html>
