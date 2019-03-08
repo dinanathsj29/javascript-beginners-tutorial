@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>05.05.01.js.variable.scope.global.local.html</title>
+
+    <!-- internal style -->
+    <style>
+      /* css selector: { property:value; } */
+      body {
+        font-family: arial;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    
+    <div class="container">
+
+      <div class="sub-container">
+
+        <h1 class="heading-text" id="mainHeadingText">05. Variables</h1>
+
+        <p class="para-text" id="mainParaText">Variables are one of the most fundamental concepts in JavaScript and other all programming languages.</p>
+
+        <h2>05.01. Variable</h2>
+
+        <ul>
+          <li>Variable is `container to store/hold the data/information`</li>
+          <li>Variable is kind of data holder where we can store some value for programming or calculation purpose</li>
+          <li>A JavaScript variable is simply a `name of storage location (named containers/named storage)` for data</li>
+          <li>The `assignment operator (=)` is used to assign value to a variable, like this: `var varName = value;` or `var firstName = 'JavaScript';`</li>
+          <li>Example: Variable declaration and assignment is just `like Maths & Algebra`: `x = 10`; and in JavaScript we write `var x = 10;`</li>
+        </ul>
+
+        <h2>05.05.01. Variable Scope</h2>
+
+        <p>The scope of a variable is the region/coverage of your program in which it is defined and exist/available. JavaScript variables have two scopes:</p>
+
+        <h2>1. Local Variables</h2>
+        
+        <ul class="normalList">
+          <li>A JavaScript local variable is declared `inside block or function`, It is accessible within the `function or block only`</li>
+          <li>A local variable will be `visible only within a function` where it is defined</li>
+          <li>`Function parameters` are always local to that function</li>
+          <li>**Note**: In function body, a `local variable takes precedence` over a global variable with the same name.</li>
+        </ul>
+
+        <h2>2. Gloabl Variables</h2>
+        
+        <ul class="normalList">
+          <li>A variable declared outside the function/at root or declared with window object is known as global variable </li>
+          <li>A global variable has global scope which means it can be defined and accessible anywhere in JavaScript code/program</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- include external JavaScript - body section -->
+    <script src="./05.05.01.script.js"></script>
+    
+  </body>
+
+</html>

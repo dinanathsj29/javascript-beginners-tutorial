@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>03.02.03.js.external.html</title>
+
+    <!-- internal style -->
+    <style>
+      /* css selector: { property:value; } */
+      body {
+        font-family: arial;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    
+    <div class="container">
+
+      <div class="sub-container">
+
+        <h1 class="heading-text" id="mainHeadingText">3. Where to embedd/include/write/put JavaScript in HTML?</h1>
+
+        <p class="para-text" id="mainParaText"></p>
+
+        JavaScript provides 3 places to write the JavaScript code in our webpage:
+        <ol>
+          <li>Inside the HEAD section</li>
+          <li>Inside the BODY section</li>
+          <li>External JavaScript .js file (separation of concern)</li>
+        </ol>
+        
+        <h2>03.02.03. External JavaScript .js file (separation of concern)</h2>
+        
+        <ul class="normalList">
+          <li>We can easily write JavaScript code in between the `script element`. In a real world application, we have 100+ maybe even a 1000+ lines of code, we don't want to write all that code in line here</li>
+          <li>We must have to `extract and separate` our JavaScript behavior code from our html markup code</li>
+          <li>A simple thumb-rule is if we have a lot of JavaScript code, we can put it into a separate file
+              - We can use/add/attach an external JavaScript file by using `script` tag with `src (source)` attribute:
+              <ul>
+                <li>script src="path/scriptfile.js" /script```</li>
+                <li>One can provide a `full URL (absolute path)` or `relative path` from current page</li>
+              </ul>
+          </li>
+          <li>We can create single external JavaScript file and embed it in many html page which provides `code re-usability`</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- include external JavaScript - body section -->
+    <script src="./03.02.03.script.js"></script>
+    
+  </body>
+
+</html>

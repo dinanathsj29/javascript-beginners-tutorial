@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>03.02.01.js.head.html</title>
+
+    <!-- internal style -->
+    <style>
+      /* css selector: { property:value; } */
+      body {
+        font-family: arial;
+      }
+    </style>
+
+    <!-- internal JavaScript - head section -->
+    <script>
+      // Write all JavaScript code here
+      alert('welcome to JavaScript written in head section');
+
+    </script>
+    
+  </head>
+
+  <body>
+    
+    <div class="container">
+
+      <div class="sub-container">
+
+        <h1 class="heading-text" id="mainHeadingText">3. Where to embedd/include/write/put JavaScript in HTML?</h1>
+
+        <p class="para-text" id="mainParaText"></p>
+
+        JavaScript provides 3 places to write the JavaScript code in our webpage:
+        <ol>
+          <li>Inside the HEAD section</li>
+          <li>Inside the BODY section</li>
+          <li>External JavaScript .js file (separation of concern)</li>
+        </ol>
+        
+        <h2>03.02.01. Inside the HEAD section (code between the head tag)</h2>
+        
+        <ul class="normalList">
+          <li>JavaScript programs/code/statements can be placed in the `head` section of an HTML page</li>
+          <li>As each `script...../script` tag blocks the page rendering process until it has fully downloaded and executed the JavaScript code so placing them in the `head section (head element` of the document without any valid reason will significantly impact your website performance</li>
+        </ul>
+
+      </div>
+
+    </div>
+    
+  </body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>04.01.04.js.output.innerhtml</title>
+
+    <!-- internal style -->
+    <style>
+      /* css selector: { property:value; } */
+      body {
+        font-family: arial;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    
+    <div class="container">
+
+      <div class="sub-container">
+
+        <h1 class="heading-text" id="mainHeadingText">04. Generating Output</h1>
+
+        <p class="para-text" id="mainParaText"></p>
+
+        <ul>
+          <li>JavaScript does not have any `display or built-in print` functions</li>
+          <li>Many times we may need to generate output from your JavaScript code like `see the value of variable`, or `write a message to browser console` to help you `debug an issue` in your running JavaScript code, and so on</li>
+          <li>That is why you have to use the JavaScript output function to generating output `(browser window or browser console dialog boxes, writing output into an HTML element, etc.)`</li>
+          <li>Using different output methods knowledge will help you while debugging or rewriting your code more conveniently</li>
+        </ul>
+
+        <h2>Different ways to show output/display data</h2>
+
+        <ol>
+          <li>Writing into an alert box with `alert() or window.alert()`</li>
+          <li>Writing into browser console with `console.log()`</li>
+          <li>Writing into the HTML / Browser Window  with `document.write()`</li>
+          <li>Write into an element of HTML / Inserting Output Inside an HTML Element with `innerHTML`</li>
+        </ol>
+
+        <h2>04.01.04. Inserting Output Inside an HTML Element: innerHTML</h2>
+        
+        <ul class="normalList">
+          <li>We can write or insert output inside an HTML element using the element's `innerHTML` property</li>
+          <li>First we need to select the element using a method such as `document.getElementById(id)` </li>
+          <li>Note: HTML element manipulating is fully dependent on JavaScript DOM manipulation concepts</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- include external JavaScript - body section -->
+    <script src="./04.01.04.script.js"></script>
+    
+  </body>
+
+</html>

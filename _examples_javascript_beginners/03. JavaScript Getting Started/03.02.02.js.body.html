@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>03.02.02.js.body.html</title>
+
+    <!-- internal style -->
+    <style>
+      /* css selector: { property:value; } */
+      body {
+        font-family: arial;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    
+    <div class="container">
+
+      <div class="sub-container">
+
+        <h1 class="heading-text" id="mainHeadingText">03. Where to embedd/include/write/put JavaScript in HTML?</h1>
+
+        <p class="para-text" id="mainParaText"></p>
+
+        JavaScript provides 3 places to write the JavaScript code in our webpage:
+        <ol>
+          <li>Inside the HEAD section</li>
+          <li>Inside the BODY section</li>
+          <li>External JavaScript .js file (separation of concern)</li>
+        </ol>
+        
+        <h2>03.02.02. Inside the BODY section (code between the body tag)</h2>
+        
+        <ul class="normalList">
+          <li>JavaScript programs/code/statements can be placed in the `body` section of an HTML page</li>
+          <li>As blocking nature of `script...../script` tag ideally, scripts should be placed at the end of the `body section`, just before the `closing /body tag`, it will make your web pages load faster, since it prevents obstruction of initial page rendering</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- internal JavaScript - body section -->
+    <script>
+      // Write all JavaScript code here
+      alert('welcome to JavaScript written in body section');
+      console.log('welcome to JavaScript written in body section');
+      document.write('<h2>welcome to JavaScript written in body section</h2>');
+
+    </script>
+    
+  </body>
+
+</html>
