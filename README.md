@@ -2784,16 +2784,104 @@ ulLiElement[ulLiElement.length - 1].style.color = 'red';
 ulLiElement[ulLiElement.length - 1].innerHTML = 'Dynamic text change at run time';
 ```
 
-### 14.04. JavaScript DOM CSS Styling ???
+### 14.04. JavaScript DOM CSS Styling
+Using JavaScript we can also apply CSS style on HTML elements to change the visual look and feel specification/presentation of HTML documents dynamically/at run time. We can apply/set almost all the CSS styles for the elements like fonts, colors, margins, padding, borders, alignments, background images, width and height, position, and so on.
+
+### Naming Conventions of CSS Properties in JavaScript
+- CSS properties like `font-size`, `background-image`, `text-decoration`, etc. contain `hyphens (-)` in names
+- In JavaScript `hyphens (-)` is a reserved operator (a minus sign), so it is impossible to write an expression with `hyphens (-)`, like: elem.style.font-size = '10px';
+- In JavaScript the CSS property names with hyphens are converted to intercapitalized style word (camelCasingNaming)
+- So CSS property `font-size`, `background-color`,`border-left-style` becomes the DOM property `fontSize`, `borderLeftStyle` respectively and so on
+
+### 14.04.01. Applying/Setting Inline Styles on Elements
+- In HTML inline styles are applied directly to the specific HTML element using the `style attribute`, eg. `<element style="color:red;">`
+- In JavaScript the `style property` is used to get or set the inline style of an element, eg. `elem.style.color = 'red';`
 
 > **Syntax & Example**: 
 ```
+// Selecting element with id 
+let mainHeadingElement = document.getElementById('mainHeadingText');
 
+// set css style
+mainHeadingElement.style.padding = '5px';
+mainHeadingElement.style.backgroundColor = 'pink';
+mainHeadingElement.style.color = 'blue';
+mainHeadingElement.style.border = '5px solid #999999';
 ```
+
+### 14.04.02. Retrieving/Getting CSS Styles details from Elements
+- We can get the styles applied on the HTML elements using the `style property`
+- `style property` only returns the style rules set in the element's style attribute, not those applied through internal/embedded style sheets, or external style sheets
+- To get the values of all CSS properties that actually render an element we can use the `window.getComputedStyle()` method
 
 > **Syntax & Example**: 
 ```
+// Selecting element with id 
+let mainHeadingElement = document.getElementById('mainHeadingText');
 
+// set css style
+mainHeadingElement.style.padding = '5px';
+mainHeadingElement.style.backgroundColor = 'pink';
+
+// console.log('// ------------------------------');
+
+// get inline css styles
+console.log('mainHeadingElement.style.padding:',mainHeadingElement.style.padding);
+console.log('mainHeadingElement.style.backgroundColor:',mainHeadingElement.style.backgroundColor);
+
+// console.log('// ------------------------------');
+
+// get computed style information/ any type of css styles internal/embedded style sheets
+var cssStyles = window.getComputedStyle(mainHeadingElement);
+console.log('internal style - color:',cssStyles.color);
+console.log('internal style - border:',cssStyles.border);
+```
+
+### 14.04.03. Applying/Adding CSS Classes to Elements - className
+- We can also get or set CSS classes to the HTML elements using the `className property`
+- As `class` is a reserved word in JavaScript, it uses the `className` property to reference the value of the HTML class attribute
+
+> **Syntax & Example**: 
+```
+// Selecting element with id 
+let mainHeadingElement = document.getElementById('mainHeadingText');
+
+// remove old classes and apply/set css class
+mainHeadingElement.className = 'bg-color';
+
+// apply/set css class
+mainHeadingElement.className += ' border';
+```
+
+### 14.04.04. Applying/Adding CSS Classes to Elements - classList
+- Using `classList property` is much easier and better to get, set or remove CSS classes from an element
+- `classList property` is supported in all major browsers except Internet Explorer prior to version 10
+
+> **Syntax & Example**: 
+```
+// Selecting element with id 
+let mainHeadingElement = document.getElementById('mainHeadingText');
+
+// apply/set/add css class with classList
+mainHeadingElement.classList.add('heading-text');
+
+// apply/set/add css class with classList
+mainHeadingElement.classList.add('border','bg-color');
+
+// remove classes with classList
+mainHeadingElement.classList.remove('border','bg-color');
+
+// if class exists remove it, if not add it
+mainHeadingElement.classList.toggle('heading-text');
+
+// mainHeadingElement.classList.add('border');
+
+// check if class exist and act accordingly
+if(mainHeadingElement.classList.contains('border')) {
+  alert('border class present');
+} else {
+  alert('NO border class present');
+}
 ```
 
 ### 14.05. JavaScript DOM HTML Get Set Attributes ???
