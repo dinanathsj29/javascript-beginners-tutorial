@@ -2884,16 +2884,76 @@ if(mainHeadingElement.classList.contains('border')) {
 }
 ```
 
-### 14.05. JavaScript DOM HTML Get Set Attributes ???
+### 14.05. JavaScript DOM HTML Get Set Attributes
+- An attribute in HTML `provides extra information` about the element, and it is applied within the start tag
+- An HTML attribute contains two fields: `name & value / key & value`
+- JavaScript provides several methods for adding, reading or removing an HTML element's attribute like `setAttribute(), getAttribute(), removeAttribute()`
+
+### 14.05.01. Applying/Setting Attribute on Element
+- The `setAttribute()` method is used to set an attribute on the specified element
+- If the attribute already present/exists on the element, the attribute value will be updated; else a new attribute is added with the specified name and value
 
 > **Syntax & Example**: 
 ```
+// Selecting element with id 
+let mainHeadingElement = document.getElementById('mainHeadingText');
+let clickButtonElement = document.getElementById('clickButton');
+let linkTextElement = document.getElementById('linkText');
 
+// set attribute class named 'btn'
+mainHeadingElement.setAttribute('class', 'btn');
+
+// set attribute disabled
+clickButtonElement.setAttribute('disabled', '');
+
+// set blank/empty attribute so that it will remove exisiting attribute value
+linkTextElement.setAttribute('href','');
 ```
+
+### 14.05.02. Retrieving/Getting Attribute Value
+- The `getAttribute()` method is used to get the current value of an attribute on the element
+- If the specified attribute does not present/exists on the element, it will return `null`
 
 > **Syntax & Example**: 
 ```
+// Selecting element with id 
+let mainHeadingElement = document.getElementById('mainHeadingText');
+let clickButtonElement = document.getElementById('clickButton');
+let linkTextElement = document.getElementById('linkText');
 
+// getting the attributes values
+let getAttrClass = mainHeadingElement.getAttribute('class');
+console.log('getAttrClass:', getAttrClass);
+
+let getAttrDisabled = clickButtonElement.getAttribute('disabled');
+console.log('getAttrDisabled:', getAttrDisabled);
+
+let getAttrHref = linkTextElement.getAttribute('href');
+console.log('getAttrHref:', getAttrHref);
+```
+
+### 14.05.03. Removing Attributes from Elements
+- The `removeAttribute()` method is used to remove an attribute from the specified element
+
+> **Syntax & Example**: 
+```
+// Selecting element with id 
+let mainHeadingElement = document.getElementById('mainHeadingText');
+let clickButtonElement = document.getElementById('clickButton');
+let linkTextElement = document.getElementById('linkText');
+
+// removing the attributes 
+mainHeadingElement.removeAttribute('class');
+
+// verify/confirm class removed or not
+console.log('mainHeadingElement.getAttribute:', mainHeadingElement.getAttribute('class'));
+console.log('mainHeadingElement.classList.contains:', mainHeadingElement.classList.contains('class'));
+
+// console.log('// ------------------------------');
+
+clickButtonElement.removeAttribute('disabled');
+
+linkTextElement.removeAttribute('href');
 ```
 
 Section 15. What's Next Step?
