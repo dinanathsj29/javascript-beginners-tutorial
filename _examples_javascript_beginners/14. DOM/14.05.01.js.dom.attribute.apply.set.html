@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>14.05.01.js.dom.attribute.apply.set.html</title>
+
+    <!-- internal style -->
+    <style>
+      /* css selector: { property:value; } */
+      body {
+        font-family: arial;
+      }
+
+      .btn {
+        padding: 0.5rem;
+        cursor: pointer;
+        color:blue;
+        background-color: rgb(176, 176, 250);
+      }
+    </style>
+
+  </head>
+
+  <body>
+    
+    <div class="container">
+
+      <div class="sub-container">
+
+        <h1 class="heading-text" id="mainHeadingText"><font>14. DOM (Document Object Model)</font></h1>
+
+        <button class="click-button" id="clickButton">Click Me</button> 
+        
+        Visit <a class="link-text" id="linkText" href="http://www.google.com" target="_blank">http://www.google.com </a>
+
+        <h2 class="sub-heading-text" id="subHeadingText">14.01. DOM (Document Object Model)</h2>
+
+        <ul>
+          <li class="list-item">DOM represents the whole html document, DOM is a structure of HTML web page where all tags are defined in a structured/structural way</li>
+          <li class="list-item">The Document Object Model (DOM) is the model that describes how all elements in an HTML page (like input fields, images, paragraphs, headings etc.), are related to the topmost structure: the document itself</li>
+          <li class="list-item">DOM defines the logical structure of the documents and the way in which they can be accessed and manipulated </li>
+          <li class="list-item">DOM is a W3C (World Wide Web Consortium) standard which defines a standard for accessing documents like programmers can build documents, navigate their structure, and add, modify, or delete elements and content</li>
+          <li class="list-item">In DOM world always think in form/terms of `Nodes` (elements, its attributes, text etc.)</li>
+        </ul>
+
+        <h2>14.02. Node</h2>
+        As we learnt above, in DOM, all parts of the document (like elements, its attributes, text etc.) are organized in a hierarchical tree-like structure; similar to a real life family tree which consists of parents and children. In DOM terminology these individual parts of the document are known as `nodes`. <br/><br/>
+        There are different types of nodes like: `Elements, Attribute & Text Node`.
+        
+<pre>
+  &lt;ul id="list" --> Element & Attribute NODE
+    &lt;li>first item &lt;/li> --> text NODE
+  &lt;/ul
+  
+  * Elements NODES not contains text
+</pre>
+
+        <h2>14.05. JavaScript DOM HTML Get Set Attributes</h2>
+        <ul class="normalList">
+          <li>An attribute in HTML `provides extra information` about the element, and it is applied within the start tag</li>
+          <li>An HTML attribute contains two fields: `name & value / key & value`</li>
+          <li>JavaScript provides several methods for adding, reading or removing an HTML element's attribute like `setAttribute(), getAttribute(), removeAttribute()`</li>
+        </ul>
+
+        <h2>14.05.01. Applying/Setting Attribute on Element</h2>
+        
+        <ul class="normalList">
+          <li>The `setAttribute()` method is used to set an attribute on the specified element</li>
+          <li>If the attribute already present/exists on the element, the attribute value will be updated; else a new attribute is added with the specified name and value</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- include external JavaScript - body section -->
+    <script src="./14.05.01.script.js"></script>
+    
+  </body>
+
+</html>
