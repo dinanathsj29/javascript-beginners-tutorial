@@ -44,7 +44,7 @@ Section 02. Introducing JavaScript
 3. **`JavaScript (JS) - Scripting language, Dynamic Page Behaviour, Logics, Conditions and Validations, Events (mouse click, hover), Interactivity with User, Dynamic updates in a Web Page`**
 
 > **Syntax & Example**:
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -235,7 +235,7 @@ Section 03. JavaScript Getting Started
 > **Note**: JavaScript is the default scripting language in HTML. The old HTML standard attributes like `type="text/javascript"` and `language="javascript"` no longer required in modern browser. 
 
 > **Syntax & Example**: 
-```
+```html
 <head>
 
     <meta charset="UTF-8">
@@ -286,7 +286,7 @@ JavaScript provides 3 places to write the JavaScript code in our webpage:
 - As each `<script>.....</script>` tag blocks the page rendering process until it has fully downloaded and executed the JavaScript code so placing them in the `head section (<head> element` of the document without any valid reason will significantly impact your website performance
 
 > **Syntax & Example**: 
-```
+```html
 <head>
 
     <!-- internal JavaScript - head section -->
@@ -304,7 +304,7 @@ JavaScript provides 3 places to write the JavaScript code in our webpage:
 - As blocking nature of `<script>.....</script>` tag ideally, scripts should be placed at the end of the `body section`, just before the `closing </body> tag`, it will make your web pages load faster since it prevents obstruction of initial page rendering
 
 > **Syntax & Example**: 
-```
+```html
 <body>
 
     page content
@@ -339,7 +339,7 @@ JavaScript provides 3 places to write the JavaScript code in our webpage:
 > **Note**: Usually when an external JavaScript file is downloaded for the first time, it is stored in the browser's cache (like images and style sheets), so it won't need to be get downloaded multiple times from the web server that makes the web pages load more faster/quickly.
 
 > **Syntax & Example - .html file**: 
-```
+```html
 <body>
 
     page content
@@ -351,7 +351,7 @@ JavaScript provides 3 places to write the JavaScript code in our webpage:
 ```
 
 > **Syntax & Example - .js file**: 
-```
+```javascript
 // external js file
 // Write all JavaScript code here
 
@@ -401,7 +401,7 @@ The syntax of JavaScript is the `set of rules` that define a correctly structure
 - An often occurrence of a code block in JavaScript is a JavaScript `function`
 
 > **Syntax & Example - .js file**: 
-```
+```javascript
 // external js file
 // Write all JavaScript code here
 
@@ -421,7 +421,6 @@ function showTotal() {
 // invoke / run  / call a function
 sayHello();
 showTotal();
-
 ```
 
 ### 03.04. JavaScript Keywords
@@ -459,7 +458,7 @@ There are two types of comments in JavaScript:
 - Single-line comments do not need closure/closing
 
 > **Syntax & Example**: 
-```
+```javascript
 // external js file
 // Write all JavaScript code here
 
@@ -479,7 +478,7 @@ var lastName = 'Jayaswal'; // variable to store lastName
 - Multi-line comments are more often used for `formal documentation`
 
 > **Syntax & Example**: 
-```
+```javascript
 /* show alert box */
 alert('Welcome to JavaScript!');
 
@@ -511,7 +510,7 @@ Section 04. JavaScript Language Fundamentals
 - This method is great for short and rapid informative messages which can be instantly closed
 
 > **Syntax & Example**: 
-```
+```javascript
 // external js file
 // Write all JavaScript code here
 
@@ -525,7 +524,7 @@ window.alert('We are learning JavaScript');
 - This is a simple, easy but very powerful method for generating detailed output
 
 > **Syntax & Example**: 
-```
+```javascript
 // external js file
 // Write all JavaScript code here
 
@@ -540,7 +539,7 @@ console.log('We are learning JavaScript');
 - Programmers do ues document.write() for `testing purposes`
 
 > **Syntax & Example**: 
-```
+```javascript
 // external js file
 // Write all JavaScript code here
 
@@ -555,7 +554,7 @@ document.write('We are learning JavaScript');
 > **Note**: HTML element manipulating is fully dependent on JavaScript DOM manipulation concepts
 
 > **Syntax & Example**: 
-```
+```javascript
 /// external js file
 // Write all JavaScript code here
 
@@ -587,7 +586,7 @@ Variables are one of the most fundamental concepts in JavaScript and other all p
 > **Note**: In ES6 'let' and 'const' keywords are used to defined variables
 
 > **Syntax & Example**: 
-```
+```javascript
 // variables defined to hold different types of data
 var techName = 'JavaScript'; // String literal 
 var version = 6; // Number literal
@@ -600,7 +599,7 @@ console.log('Learning '+techName+version);
 Variables can also be declared without having any initial values assigned to them. This is useful for variables which are supposed to hold values like user inputs, calculations, status updates etc.
 
 > **Syntax & Example**: 
-```
+```javascript
 // Declaring Variables
 var techName;
 var version;
@@ -628,7 +627,7 @@ console.log('Welcome '+userName);
 We can also `declare multiple variables` and set their initial values in a single statement, each variable is `separated by commas`.
 
 > **Syntax & Example**: 
-```
+```javascript
 // Declaring multiple variables
 var techName = 'JavaScript', version = 6, isDone = true;
 
@@ -684,7 +683,7 @@ All JavaScript variables must be `identified`/referred/defined/named with `uniqu
 2. **Camel Case:**: firstName, lastName, dateOfBirth, isPassed, nativePlace  OR <br/> : FirstName, LastName, DateOfBirth, IsPassed, NativePlace 
 
 > **Syntax & Example**: 
-```
+```javascript
 // variables defined to hold different types of data
 var _firstName = 'JavaScript';
 var $version = 6;
@@ -710,7 +709,7 @@ The scope of a variable is the region/coverage of your program in which it is de
 > **Note**: In the function body, a `local variable takes precedence` over a global variable with the same name.
 
 > **Syntax & Example**: 
-```
+```javascript
 // global variable
 var globalName = 'Global';
 
@@ -737,7 +736,7 @@ window.alert(localName);
 - A global variable has a global scope which means it can be defined and accessible anywhere in JavaScript code/programme
 
 > **Syntax & Example**: 
-```
+```javascript
 // global variable
 var globalName = 'Global';
 
@@ -770,7 +769,7 @@ ES6 introduces two new keywords `let` and `const` for declaring variables. The `
 - Variables declared with `let` keyword are `block-scoped ({})` and they are not hoisted
 
 > **Syntax & Example**: 
-```
+```javascript
 // traditional var syntax
 var techName1 = 'JavaScript';
 
@@ -807,7 +806,7 @@ console.log('outside: ' + version2);  // undefined
 - However, you can change `object properties` or `array elements`
 
 > **Syntax & Example**: 
-```
+```javascript
 // traditional var syntax
 var PI1 = 3.14;
 console.log(PI1); // 3.14
@@ -893,7 +892,7 @@ We have two types of programming languages:
 - JavaScript is a dynamic type language, means you don't need to specify a type of the variable because it is dynamically used by JavaScript engine
 
 > **Syntax & Example**: 
-```
+```javascript
 let name = 'JavaScript';
 name = false;
 name = 100;
@@ -909,7 +908,7 @@ alert(typeof(name));
 - It can be used with or without parentheses `(typeof(x)` or `typeof x)`
 
 > **Syntax & Example**: 
-```
+```javascript
 // use typeof to find data type of variables
 // Strings
 alert(typeof "Hello"); // "string"
@@ -993,7 +992,7 @@ JavaScript supports the following Arithmetic operators (List of Arithmetic opera
 | **        | Exponentiation (ES2016 / ES6)         | 2 ** 2 = 4 ; 2 ** 3 = 8 (Multiply num1 for num2 times)  |
 
 > **Syntax & Example**: 
-```
+```javascript
 // Arithmetic operators
 var num1 = 10;
 var num2 = 4;
@@ -1028,7 +1027,7 @@ JavaScript supports the following Assignment operators (List of Assignment opera
 | %=        | Modulus and assign                     | var num1 = 10; num1 %= 5; Now num1 = 0 (assigns and Modulus value to the variable, num1 %= 5; is equivalent to num1 = num1 % 5;)|
 
 > **Syntax & Example**: 
-```
+```javascript
 // Assignment operators
 var num1 = 10;
 var num2 = 20
@@ -1064,7 +1063,7 @@ JavaScript supports the following Logical operators (List of Logical operators):
 | !         | Logical NOT                              | !x; (True if x is not true)           |
 
 > **Syntax & Example**: 
-```
+```javascript
 // Logical operators - basic examples
 
 // && (Logical AND) - returns true if both operands are true
@@ -1089,7 +1088,7 @@ console.log('isYoungGeneration: ', isYoungGeneration);
 ```
 
 > **Syntax & Example**: 
-```
+```javascript
 // Logical operators - real world scenario/example
 
 // check credit/loan eligibility - (if applicant have HIGH INCOME & GOOD CREDIT SCORE, he is eligible for credit/loan)
@@ -1129,7 +1128,7 @@ JavaScript supports the following Comparison (or Relational) operators (List of 
 | >=        | Greater than or equal to                | x >= y (True if x is greater than or equal to y)|
 
 > **Syntax & Example**: 
-```
+```javascript
 // Comparison (or Relational) operators
 var num1 = 25;
 var num2 = 35;
@@ -1157,7 +1156,7 @@ alert(num1 >= num2);  // false
 | ?         | Ternary operator                      | var result = x < y ? 'x is smaller' : 'y is smaller' (short hand method to write if condition)|
 
 > **Syntax & Example**: 
-```
+```javascript
 // Conditional (? or ternary) Operator
 
 // age category
@@ -1186,7 +1185,7 @@ There are two operators which can also be used be for strings:
 | +=        | Concatenation assignment              | string1 += string2 (Appends the str2 to the str1) |
 
 > **Syntax & Example**: 
-```
+```javascript
 // String Operators
 var message1 = "Hello";
 var message2 = " World!";
@@ -1204,7 +1203,7 @@ alert(message1); // Outputs: Hello World!
 - If many operations have the same precedence (like addition and subtraction), they are `computed from left to right`
 
 > **Syntax & Example**: 
-```
+```javascript
 // Operator precedence
 var result1 = 10 + 2 * 5
 alert('10 + 2 * 5 =  ' + result1); // answer is 20 NOT 60 (12 * 5 ), actually * or multiplication have higher precedence so the actual calculation is like 10 + ( 2*5 ) = 10 + 10 = 20
@@ -1248,7 +1247,7 @@ Section 08. Functions
 - and a statement block surrounded by `curly braces { }`
 
 > **Syntax & Example**: 
-```
+```javascript
 //1. define / declare / create function
 
 function showMessage () {
@@ -1263,7 +1262,7 @@ function showMessage () {
 - Defined function can be invoked/called/run from anywhere in the document, by typing `function name followed by a set of parentheses, like functionName()`
 
 > **Syntax & Example**: 
-```
+```javascript
 //2. invoke / call the function
 
 showMessage();
@@ -1294,7 +1293,7 @@ Examples of function names:
 - Simple/Normal function which we use on a daily basis to perform some action/task
 
 > **Syntax & Example**: 
-```
+```javascript
 var name = 'Dinanath';
 
 //1. define / declare / create function
@@ -1314,7 +1313,7 @@ sayHello();
 - You can specify parameters when you define your function to accept input values at run time
 
 > **Syntax & Example**: 
-```
+```javascript
 // Parameterized function
 //1. define / declare / create function
 function sayHello (name) {
@@ -1346,7 +1345,7 @@ calculateSum(100, 200);
 With ES6, now you can specify default values to the function parameters. This means that if no arguments are provided to function when it is called these default parameters values will be used.
 
 > **Syntax & Example**: 
-```
+```javascript
 // Parameterized function with default parameters
 
 //1. define / declare / create function
@@ -1381,7 +1380,7 @@ calculateSum(100, 200);
 - The return statement usually placed as the last line of the function
 
 > **Syntax & Example**: 
-```
+```javascript
 // Return type function
 //1. define / declare / create function
 function getSum (num1, num2) {
@@ -1410,7 +1409,7 @@ The syntax that we've used before to create functions is called `function declar
   - Named function expression
 
 > **Syntax & Example**: 
-```
+```javascript
 / function declaration (Regular / normal function)
 function getSum1(num1, num2) {
   var total = num1 + num2;
@@ -1432,11 +1431,10 @@ alert(getSum2(10,20));
 // assign function to another variable
 var sum1 = getSum2;
 alert(sum1(100,200));
-
 ```
 
 > **Syntax & Example**: 
-```
+```javascript
 // function expression - named
 var getSum2 = function getTotal(num1, num2) {
   var total = num1 + num2;
@@ -1456,7 +1454,7 @@ alert(sum1(5,10));
 -  It runs as soon as the browser finds it
 
 > **Syntax & Example**: 
-```
+```javascript
 // Immediately invoked function expression (IIFE)
 (function () {
   console.log('Welcome to Immediately invoked function expression (IIFE)');
@@ -1487,7 +1485,7 @@ Section 09. Loops
 - For loop consists of 3 statements (), mostly `i = index` is used for loop initialization
 
 > **Syntax & Example**: 
-```
+```javascript
 // for loop
 
 /* for (statement 1; statement 2; statement 3) {
@@ -1509,7 +1507,7 @@ for (let i=1; i<=5; i++) {
 #### The for Loop - Reverse order
 
 > **Syntax & Example**: 
-```
+```javascript
 // for loop - reverse order
 
 for (let i = 5; i >= 1; i--) {
@@ -1523,7 +1521,7 @@ for (let i = 5; i >= 1; i--) {
 - Loops through a block of code until the specified condition evaluates to true
 
 > **Syntax & Example**: 
-```
+```javascript
 // while loop
 
 /*while(condition) {
@@ -1545,7 +1543,7 @@ while (i <= 5) {
 - The do...while loop will always be `executed at least once (before checking if the condition is true)`, even if the condition is false
 
 > **Syntax & Example**: 
-```
+```javascript
 // do...while loop
 
 /*do {
@@ -1570,7 +1568,7 @@ while (i <= 5);
 #### The for...in Loop - array
 
 > **Syntax & Example**: 
-```
+```javascript
 // for...in loop
 
 /*for(variable/key in array/object) {
@@ -1591,7 +1589,7 @@ for (let color in arrColors) {
 #### The for...in Loop - object
 
 > **Syntax & Example**: 
-```
+```javascript
 // for...in loop
 
 /*for(variable/key in array/object) {
@@ -1612,7 +1610,7 @@ for (emp in objEmployee) {
 #### The for...in Loop - Inbuilt JavaScript objects
 
 > **Syntax & Example**: 
-```
+```javascript
 // for...in loop
 
 /*for(variable/key in array/object) {
@@ -1633,8 +1631,8 @@ for (props in window) {
 - The code inside the loop is executed for each element of the iterable object
 
 > **Syntax & Example**: 
-```
-/ for...of loop
+```javascript
+// for...of loop
 
 /*for(element in array/string) {
   // Code to be executed
@@ -1663,7 +1661,7 @@ for (let letter of name) {
 - The `continue` statement tells the interpreter to immediately start the next iteration of the loop and skip the remaining code block
 
 > **Syntax & Example**: 
-```
+```javascript
 // break continue statement
 
 /* break */
@@ -1738,7 +1736,7 @@ Section 10. Conditions
 > **Note**: Use `if` to specify a block of code to be executed, `if a specified condition is true`
 
 > **Syntax & Example**: 
-```
+```javascript
 // if conditional statement
 
 /*if(condition/expression) {
@@ -1777,7 +1775,7 @@ if (age >= 18) {
 > **Note**: Use `else` to specify a block of code to be executed, `if the same condition is false`
 
 > **Syntax & Example**: 
-```
+```javascript
 // if...else conditional statement
 
 /*if(condition/expression){  
@@ -1817,7 +1815,7 @@ if (age >= 18) {
 > **Note**: Use `else if` to specify a new condition to test, `if the first condition is false`
 
 > **Syntax & Example**: 
-```
+```javascript
 // If...else if...else conditional statement
 
 /*if(condition/expression 1) {
@@ -1860,7 +1858,7 @@ if (age >= 60) {
 > **Note**: Use `switch` to specify many `alternative blocks of code to be executed`
 
 > **Syntax & Example**: 
-```
+```javascript
 // switch...case conditional statement
 
 /* switch(variable/expression){
@@ -1933,7 +1931,7 @@ There are 3 main ways to construct an array:
 - var myArray = [element0, element1, ..., elementN];
 
 > **Syntax & Example**: 
-```
+```javascript
 // create array with array literal
 
 // var myArray = [element0, element1, ..., elementN];
@@ -1961,7 +1959,7 @@ console.log('Total Elements: ' + arrTechnologies.length);
 - var myArray = new Array(); OR var myArray = Array();
 
 > **Syntax & Example**: 
-```
+```javascript
 // create array with new keyword
 
 // var myArray = new Array();
@@ -2006,7 +2004,7 @@ console.log(arrTechnologies); // show all elements
 - var myArray = new Array(element0, element1, ..., elementN);
 
 > **Syntax & Example**: 
-```
+```javascript
 // create array with new keyword Array constructor passing parameter
 
 // var myArray = new Array(element0, element1, ..., elementN);
@@ -2033,7 +2031,7 @@ console.log(arrJsFrameworks); // show all elements
 - myarray.length
 
 > **Syntax & Example**: 
-```
+```javascript
 // get/retreive/find array length
 
 // myarray.length
@@ -2061,7 +2059,7 @@ console.log(arrJsFrameworks.length);
 - myarray[indexNumber], myarray[0] // get first array element
 
 > **Syntax & Example**: 
-```
+```javascript
 // access/loop thourgh array element
 
 // myarray[indexNumber], myarray[0]
@@ -2097,7 +2095,7 @@ for (let i = 0; i < arrJsFrameworks.length; i++) {
 - myarray[indexNumber]='value', myarray[2]='value', myarray.push('value'), myarray.unshift('value')
 
 > **Syntax & Example**: 
-```
+```javascript
 // add/edit array element
 
 // myarray[indexNumber]='value', myarray[2]='value', myarray.push('value'), myarray.unshift('value')
@@ -2139,7 +2137,7 @@ console.log('arrColors.length: ' + arrColors.length);
 > **Note**: The `push() and pop() methods runs faster` than unshift() and shift(). Because push() and pop() methods add and remove elements at the end of an array, therefore, the elements do not move. unshift() and shift() add and remove elements at the beginning of the array that requires re-indexing/re-structuring of the whole array.
 
 > **Syntax & Example**: 
-```
+```javascript
 // remove array element from start and end
 
 // myarray.pop(), myarray.shift()
@@ -2200,7 +2198,7 @@ There are 3 main ways to construct an object:
 - var MyObject = { property1: value1, property2: value2.....propertyN: valueN }  
 
 > **Syntax & Example**: 
-```
+```javascript
 // create object with object literal
 
 // var MyObject = { property1: value1, property2: value2.....propertyN: valueN }
@@ -2264,7 +2262,7 @@ console.log('// ------------------------------');
 - var MyObject = new Object(); OR var MyObject = Object();
 
 > **Syntax & Example**:
-```
+```javascript
 // create object with new keyword
 
 // var MyObject = new Object(); OR var MyObject = Object();
@@ -2326,7 +2324,7 @@ console.log('// ------------------------------');
 - Each argument value can be assigned in the current object by using `this` keyword, `this` keyword refers to the `current object`
 
 > **Syntax & Example**: 
-```
+```javascript
 // create object with new keyword - Object constructor with function
 
 function Technology(name, version, type) {
@@ -2364,7 +2362,7 @@ console.log('// ------------------------------');
 - MyObject.propertyName; OR MyObject[propertyName]; OR MyObject['propertyName']
 
 > **Syntax & Example**: 
-```
+```javascript
 // access/loop thourgh array element
 
 // MyObject.propertyName; OR MyObject[propertyName]; OR MyObject['propertyName']
@@ -2397,7 +2395,7 @@ console.log('// ------------------------------');
 > **Note**: The `delete` operator only removes an `object property or array element`. It does not work/has no effect on variables or declared functions.
 
 > **Syntax & Example**: 
-```
+```javascript
 // remove/delete Object's Properties
 
 // delete MyObject.propertyName;
@@ -2452,7 +2450,7 @@ A mouse event is triggered when the user clicks some element, move the mouse poi
   - Occurs when the mouse pointer/cursor is moved
 
 > **Syntax & Example**: 
-```
+```html
 <ol class="normalList">
   <li><strong>click</strong> (`onclick` event handler) <br/>
     <span onclick="alert('You have clicked an element!')" style="color:blue;cursor: pointer;">Occurs When the `mouse clicks on an element`, links, buttons etc. on a web page </span>
@@ -2482,7 +2480,7 @@ A keyboard event is fired up when the user presses or release a key on the keybo
   - Keys like Ctrl, Shift, Alt, Esc, Arrow keys, etc. will not generate a keypress event, but will generate a keydown and keyup event
 
 > **Syntax & Example**: 
-```
+```html
 <label>Enter Name:</label> 
 
 <input type="text" placeholder="Enter Name" 
@@ -2504,7 +2502,7 @@ A form event is triggered when a form control/form fields (text fields/radio but
   - Occurs only when the user submits a form on a web page
 
 > **Syntax & Example**: 
-```
+```html
 <form action="" method="post" onsubmit="alert('Form data submitted to the server!');">
 
   <label>First Name:</label>
@@ -2551,8 +2549,8 @@ Events are happening/triggering all over. Events do trigger even when the page h
 > **Note**: The unload event is not supported properly in most of the browsers.
 
 > **Syntax & Example**: 
-```
- <body onload="window.alert('Page loaded successfully!');" onunload="window.alert('sure you want to leave this page?');">
+```html
+<body onload="window.alert('Page loaded successfully!');" onunload="window.alert('sure you want to leave this page?');">
 
 
 <script>
@@ -2576,7 +2574,7 @@ Events are happening/triggering all over. Events do trigger even when the page h
 #### 13.03.01. HTML attribute
 
 > **Syntax & Example**: 
-```
+```javascript
 <h2 onclick="window.alert('HTML attribute onclick used here!')" style="color:#0000ff; cursor:pointer">13.03.01. HTML attribute | Click Me!</h2>
 
 <button onclick="alert('Hello world! Welcome to JavaScript Events!!')">Click here...</button>
@@ -2597,7 +2595,7 @@ function fnShowMessage () {
 #### 13.03.02. DOM element properties
 
 > **Syntax & Example**: 
-```
+```javascript
 <button id="messageButton1">Click here...</button>
 <button id="messageButton2">Click here...</button>
 
@@ -2621,14 +2619,14 @@ function fnShowMessage() {
 #### 13.03.03. Registering event listeners ???
 
 > **Syntax & Example**: 
-```
+```javascript
 myButton.addEventListener('click', someFunc, false);
 ```
 
 > **Note**: This method is preferred in modern web pages. IE 6-8 do not support this method, there is an alternate for the `addEventListener` is `attachEvent` (myButton.attachEvent (‘onclick', someFunc);)
 
 > **Syntax & Example**: 
-```
+```javascript
 
 ```
 
@@ -2647,7 +2645,7 @@ As we learned above, in DOM, all parts of the document (like elements, its attri
 There are different types of nodes like: `Elements, Attribute & Text Node`.
 
 > **Syntax & Example**: 
-```
+```html
 <ul id="list"> --> Element & Attribute NODE
   <li>first item </li> --> text NODE
 </ul>
@@ -2666,7 +2664,7 @@ Let's learn some of the common ways of selecting the elements on a page and do s
 - `getElementById()` method returns the element having the given id value
 
 > **Syntax & Example**: 
-```
+```javascript
 // Selecting element with id 
 let mainHeadingElement = document.getElementById('mainHeadingText');
 
@@ -2700,7 +2698,7 @@ mainHeadingElement.style.backgroundColor = 'pink';
 - `getElementsByClassName()` method `returns an array of all elements` with given class names
 
 > **Syntax & Example**: 
-```
+```javascript
 // Selecting elements with class
 let listItems = document.getElementsByClassName("list-item");
 console.log(listItems);
@@ -2729,7 +2727,7 @@ for(var listItem in listItems) {
 - `getElementsByTagName()` method `returns an array of all elements` with given tag name
 
 > **Syntax & Example**: 
-```
+```javascript
 // Selecting all LI elements with tag name
 let liElements = document.getElementsByTagName('li');
 console.log(liElements);
@@ -2769,7 +2767,7 @@ for(var li in liElements) {
 - `querySelectorAll()` method `returns an array` or list of all the elements that matches the specified selectors
 
 > **Syntax & Example**: 
-```
+```javascript
 // Selecting all ul -> li elements
 let ulLiElement = document.querySelectorAll('ul li');
 console.log(ulLiElement);
@@ -2798,7 +2796,7 @@ Using JavaScript we can also apply CSS style on HTML elements to change the visu
 - In JavaScript the `style property` is used to get or set the inline style of an element, eg. `elem.style.color = 'red';`
 
 > **Syntax & Example**: 
-```
+```javascript
 // Selecting element with id 
 let mainHeadingElement = document.getElementById('mainHeadingText');
 
@@ -2815,7 +2813,7 @@ mainHeadingElement.style.border = '5px solid #999999';
 - To get the values of all CSS properties that actually render an element we can use the `window.getComputedStyle()` method
 
 > **Syntax & Example**: 
-```
+```javascript
 // Selecting element with id 
 let mainHeadingElement = document.getElementById('mainHeadingText');
 
@@ -2842,7 +2840,7 @@ console.log('internal style - border:',cssStyles.border);
 - As `class` is a reserved word in JavaScript, it uses the `className` property to reference the value of the HTML class attribute
 
 > **Syntax & Example**: 
-```
+```javascript
 // Selecting element with id 
 let mainHeadingElement = document.getElementById('mainHeadingText');
 
@@ -2858,7 +2856,7 @@ mainHeadingElement.className += ' border';
 - `classList property` is supported in all major browsers except Internet Explorer prior to version 10
 
 > **Syntax & Example**: 
-```
+```javascript
 // Selecting element with id 
 let mainHeadingElement = document.getElementById('mainHeadingText');
 
@@ -2894,7 +2892,7 @@ if(mainHeadingElement.classList.contains('border')) {
 - If the attribute already present/exists on the element, the attribute value will be updated; else a new attribute is added with the specified name and value
 
 > **Syntax & Example**: 
-```
+```javascript
 // Selecting element with id 
 let mainHeadingElement = document.getElementById('mainHeadingText');
 let clickButtonElement = document.getElementById('clickButton');
@@ -2915,7 +2913,7 @@ linkTextElement.setAttribute('href','');
 - If the specified attribute does not present/exists on the element, it will return `null`
 
 > **Syntax & Example**: 
-```
+```javascript
 // Selecting element with id 
 let mainHeadingElement = document.getElementById('mainHeadingText');
 let clickButtonElement = document.getElementById('clickButton');
@@ -2936,7 +2934,7 @@ console.log('getAttrHref:', getAttrHref);
 - The `removeAttribute()` method is used to remove an attribute from the specified element
 
 > **Syntax & Example**: 
-```
+```javascript
 // Selecting element with id 
 let mainHeadingElement = document.getElementById('mainHeadingText');
 let clickButtonElement = document.getElementById('clickButton');
