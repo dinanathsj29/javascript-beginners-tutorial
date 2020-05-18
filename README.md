@@ -50,7 +50,10 @@ To move forward with JavaScript you just need basic knowledge of XHTML/HTML. Her
 
 Topics include
 =====================
+
 1. [Course Introduction](#section-01-course-introduction)
+    - 01.01. [Welcome](#0101-welcome)
+    - 01.02. [Who is this for? Audience](#0102-who-is-this-for-audience)
 2. [Introducing JavaScript](#section-02-introducing-javascript)
 3. [JavaScript Getting Started](#section-03-javascript-getting-started)
 4. [JavaScript Language Fundamentals](#section-04-javascript-language-fundamentals)
@@ -68,10 +71,15 @@ Topics include
 
 Section 01. Course Introduction
 =====================
-### 01.01. Welcome
-Hi All, I'm **`Dinanath Jayaswal, Senior UI/Web Developer and Adobe Certified Expert Professional`**, I wanna welcome you to JavaScript for Beginners. In this course, I will take you through with the ins and outs of learning JavaScript. This course will help you to learn the fundamentals of programming with JavaScript scripting language, from the basic to advanced topics step-by-step.
 
-### 01.02. Who is this for?
+01.01. Welcome
+---------------------
+
+Hi All, I'm **`Dinanath Jayaswal, Senior UI/Web Developer and Adobe Certified Expert Professional`**, I wanna welcome you to JavaScript for Beginners. In this course, I will take you through with the ins and outs of learning JavaScript. This course will help you to learn the fundamentals of programming with JavaScript scripting language, from the basics to advanced topics step-by-step.
+
+01.02. Who is this for? Audience
+---------------------
+
 This course is for any Web Designer, Developer who is interested in dynamic Web Design and Development / Web Programming with JavaScript. Anyone who wants to make a career in Web Development or planning on being a front-end developer must learn JavaScript.
 
 Section 02. Introducing JavaScript
