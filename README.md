@@ -92,6 +92,9 @@ Hi All, I'm **`Dinanath Jayaswal, Senior UI/Web Developer and Adobe Certified Ex
 
 This course is for any Web Designer, Developer who is interested in dynamic Web Design and Development / Web Programming with JavaScript. Anyone who wants to make a career in Web Development or planning on being a front-end developer must learn JavaScript.
 
+Section 02. Introducing JavaScript
+=====================
+
 02.01. Importance
 ---------------------
 
