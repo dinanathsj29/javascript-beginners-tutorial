@@ -179,7 +179,7 @@ Now-a-days with the help of `Node (Node.js)` JavaScript is used for `Back-end (S
 <p>
   <figure>
     &nbsp;&nbsp;&nbsp; <img src="./_examples_javascript_beginners/assets/images/2.2.2-google-trends-compare.png" alt="Google Trends Language Compare " title="Google Trends Language Compare " width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image 02.02.-2 - Google Trends - Language Compare </figcaption>
+    <figcaption>&nbsp;&nbsp;&nbsp; Image 02.02.02 - Google Trends - Language Compare </figcaption>
   </figure>
 </p>
 
