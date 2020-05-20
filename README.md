@@ -62,9 +62,9 @@ Topics include
     - 02.05. [Where does the JavaScript code run?](#0205-where-does-the-javascript-code-run)
     - 02.06. [Who are using JavaScript?](#0206-who-are-using-javascript)
     - 02.07. [History of JavaScript](#0207-history-of-javascript)
-    - 02.08. [JavaScript Vs ECMAScript?](#0208-javascript-vs-ecmascript)
+    - 02.08. [JavaScript Vs ECMAScript](#0208-javascript-vs-ecmascript)
     - 02.09. [Types of Script](#0209-types-of-script) | [Various Scripting languages](#0209-various-scripting-languages) | [Client-Side Scripting Vs Server Side Scripting](#0209-client-side-scripting-vs-server-side-scripting)
-    - 02.10. [Prerequisites of using HTML & JavaScript](#0210-prerequisites-of-using-html-&-javascript)
+    - 02.10. [Prerequisites of using HTML and JavaScript](#0210-prerequisites-of-using-html-and-javascript)
 3. [JavaScript Getting Started](#section-03-javascript-getting-started)
 4. [JavaScript Language Fundamentals](#section-04-javascript-language-fundamentals)
 5. [Variables](#section-05-variables)
@@ -306,7 +306,7 @@ JavaScript was originally designed and developed to run only in browsers. But no
 | **Example**: Javascript, VB script, ActionScript, HTML, XHTML etc.  | **Example**: ASP, JSP, PHP, ASP#.Net, Perl, Ruby, Python, CGI etc.
 | | |
 
-02.10. Prerequisites of using HTML & JavaScript
+02.10. Prerequisites of using HTML and JavaScript
 ---------------------
 
 ### Tools for building web sites-web pages/writing HTML, CSS & JavaScript
