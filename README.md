@@ -66,6 +66,11 @@ Topics include
     - 02.09. [Types of Script](#0209-types-of-script) | [Various Scripting languages](#0209-various-scripting-languages) | [Client-Side Scripting Vs Server Side Scripting](#0209-client-side-scripting-vs-server-side-scripting)
     - 02.10. [Prerequisites of using HTML and JavaScript](#0210-prerequisites-of-using-html-and-javascript)
 3. [JavaScript Getting Started](#section-03-javascript-getting-started)
+    - 03.01. [How to write Javascript?](#0301-how-to-write-javascript?) | [JavaScript in HTML](#0301-javascript-in-html)
+    - 03.02. [Where to write JavaScript in HTML?](#0302-where-to-write-javascript-in-html) | [Where to embed include write put JavaScript in HTML?](#0302-where-to-embed-include-write-put-javascript-in-html)
+    - 03.03. [JavaScript Code structure](#0303-javascript-code-structure)
+    - 03.04. [JavaScript Keywords](#0304-javascript-keywords)
+    - 03.05. [Comments](#0305-Comments)
 4. [JavaScript Language Fundamentals](#section-04-javascript-language-fundamentals)
 5. [Variables](#section-05-variables)
 6. [Data types](#section-06-data-types)
@@ -350,22 +355,29 @@ Use `F12` key on the keyboard to open the `developer tools` then click on the `C
 
 Section 03. JavaScript Getting Started
 =====================
-### 03.01. How to write Javascript? JavaScript in HTML
+
+03.01. How to write Javascript?
+---------------------
+03.01. JavaScript in HTML
+---------------------
+
 - The HTML `<script>.....</script>` tag is used to embed/insert/implement a JavaScript programs/code into any part of an HTML document/page
 - The `<script>.....</script>` tag specifies that we are using JavaScript
 - The `<script>.....</script>` element can be placed in the `<head>`, or `<body>` section of an HTML document
 - Each `<script>.....</script>` tag blocks the page rendering process until it has fully downloaded and executed the JavaScript code
+  - So the best practice is to place/add the `<script>.....</script>` at the bottom/end of `body` tag/section ie. just before the closing `</body>` tag
 
-> **Note**: JavaScript is the default scripting language in HTML. The old HTML standard attributes like `type="text/javascript"` and `language="javascript"` no longer required in modern browser. 
+> **Note**: <br/>
+JavaScript is the default scripting language in HTML. The old HTML standard attributes like `type="text/javascript"` and `language="javascript"` no longer required in modern browser 
 
-> **Syntax & Example**: 
+> **Syntax & Example**: `03.01.js.script.tag.html`
 ```html
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>03.01.javascript.script.tag.html</title>
+    <title>03.01.js.script.tag.html</title>
 
     <!-- internal style -->
     <style>
@@ -392,24 +404,29 @@ Section 03. JavaScript Getting Started
     <script>
       /* Write all JavaScript code here */
       console.log('welcome to JavaScript');
-      document.write('This is dyanamic content. Hello All, Lets write something on web page')
+      document.write('This is dyanamic content. Hello All, Lets write something on web page');
       
     </script>
     
 </body>
 ```
 
-### 03.02. Where to embedd/include/write/put JavaScript in HTML?
-JavaScript provides 3 places to write the JavaScript code in our webpage:
+03.02. Where to write JavaScript in HTML?
+---------------------
+03.02. Where to embed include write put JavaScript in HTML?
+---------------------
+
+### JavaScript provides 3 places to write the JavaScript code in our webpage:
 1. Inside the HEAD section
 2. Inside the BODY section
 3. External JavaScript .js file (separation of concern)
 
-#### 1. Inside the HEAD section (code between the head tag)
+### 03.02.01. Inside the HEAD section (code between the head tag)
+
 - JavaScript programs/code/statements can be placed in the `<head>` section of an HTML page
 - As each `<script>.....</script>` tag blocks the page rendering process until it has fully downloaded and executed the JavaScript code so placing them in the `head section (<head> element` of the document without any valid reason will significantly impact your website performance
 
-> **Syntax & Example**: 
+> **Syntax & Example**: `03.02.01.js.head.html` 
 ```html
 <head>
 
@@ -423,11 +440,12 @@ JavaScript provides 3 places to write the JavaScript code in our webpage:
 </head>
 ```
 
-#### 2. Inside the BODY section (code between the body tag)
+### 03.02.02. Inside the BODY section (code between the body tag)
+
 - JavaScript programs/code/statements can be placed in the `<body>` section of an HTML page
 - As blocking nature of `<script>.....</script>` tag ideally, scripts should be placed at the end of the `body section`, just before the `closing </body> tag`, it will make your web pages load faster since it prevents obstruction of initial page rendering
 
-> **Syntax & Example**: 
+> **Syntax & Example**: `03.02.02.js.body.html`
 ```html
 <body>
 
@@ -445,8 +463,9 @@ JavaScript provides 3 places to write the JavaScript code in our webpage:
 </body>
 ```
 
-#### 3. External JavaScript .js file (separation of concern)
-- We can easily write JavaScript code in between the `script element`. In a real-world application, we have 100+ maybe even 1000+ lines of code, we don't want to write all that code in line here
+### 03.02.03. External JavaScript .js file (separation of concern)
+
+- We can easily write JavaScript code in between the `script element`. In a real-world application, we have 100+ maybe even 1000+ lines of code, we don't want to write all that code inline here
 - We must have to `extract and separate` our JavaScript behavior code from our HTML markup code
 - A simple thumb-rule is if we have a lot of JavaScript code, we can put it into a separate file
 - We can use/add/attach an external JavaScript file by using `<script>` tag with `src (source)` attribute:
@@ -454,27 +473,29 @@ JavaScript provides 3 places to write the JavaScript code in our webpage:
     - One can provide a `full URL (absolute path)` or `relative path` from the current page
 - We can create a single external JavaScript file and embed it in many/any HTML page which provide `code re-usability`
 
-#### Advantages of External JavaScript 
-- It separates HTML and code (separation of concern)
+### 03.02.04. Advantages of External JavaScript 
+
+- It separates HTML and JavaScript code (separation of concern)
 - Code re-usability
 - It makes HTML and JavaScript file/code easier to read, maintain and more meaningful/semantic
 - Web page loads faster /increase the speed of the webpage (Cached JavaScript files)
 
-> **Note**: Usually when an external JavaScript file is downloaded for the first time, it is stored in the browser's cache (like images and style sheets), so it won't need to be get downloaded multiple times from the web server that makes the web pages load more faster/quickly.
+> **Note**: <br/>
+Usually, when an external JavaScript file is downloaded for the first time, it is stored in the browser's cache (like images and style sheets), so it won't need to be get downloaded multiple times from the web server that makes the web pages load faster/quickly.
 
-> **Syntax & Example - .html file**: 
+> **Syntax & Example - `.html file`**: `03.02.03.js.external.html`
 ```html
 <body>
 
     page content
 
     <!-- include external JavaScript - body section -->
-    <script src="./ 03.script.js"></script>
+    <script src="./03.script.js"></script>
     
 </body>
 ```
 
-> **Syntax & Example - .js file**: 
+> **Syntax & Example - `.js file`**: `03.02.03.script.js`
 ```javascript
 // external js file
 // Write all JavaScript code here
@@ -484,47 +505,58 @@ console.log('welcome to JavaScript written in external file');
 document.write('<h2>welcome to JavaScript written in external file</h2>');
 ```
 
-### 03.03. JavaScript Code structure
+03.03. JavaScript Code structure
+---------------------
 The syntax of JavaScript is the `set of rules` that define a correctly structured JavaScript program. Let's study some of the building blocks of JavaScript code:
 
-#### JavaScript Statements
+### 03.03.01. JavaScript Statements
+
 - One line of JavaScript Code is one JavaScript Statement / Instruction / Command
 - Statements are a command to Browser to do something / perform actions
+- A Statement is a piece of code that expresses an action to take place
 - JavaScript code/program (or just JavaScript) is a sequence of statements
 - Statements are written in-between `<script>.....</script>` tag
 - Statements are separated by `Semicolon;` so we may write many statements in a line (optional)
 - JavaScript ignores extra line breaks and white spaces
 - JavaScript is case sensitive language (VB, Pascal, HTML are case insensitive)
 - JavaScript is interpreted not compiled (write and handed over to the web browser)
+- All statement in JavaScript should be terminated by a `Semicolon;` 
 
-> **Note**: JavaScript statements are composed of: **`Values, Operators, Expressions, Keywords, and Comments`**
+> **Note**: <br/>
+JavaScript statements are composed of: **`Values, Operators, Expressions, Keywords, and Comments`**
 
-#### Whitespace and Line Breaks
+### 03.03.02. Whitespace and Line Breaks
+
 - JavaScript ignores `spaces, tabs, and newlines` that appear in JavaScript programs
 - We can freely use spaces, tabs, and newlines to format and indent programs in a neat-clean and consistent way that makes the code easy to read and understand (not advisable)
 
-#### Semicolons
+### 03.03.03. Semicolons
+
 - JavaScript statements are generally followed by a `semicolon; character`
 - A semicolon may be omitted in `most cases` when a line break exists
 - JavaScript interprets the line break as an `implicit` semicolon, called an `automatic semicolon insertion`
 - **In most cases, a newline implies a semicolon, But “in most cases” does not mean “always”!**
 
-> **Note**: It is a good programming practice to use semicolons; after every statement
+> **Note**: <br/>
+It is a good programming practice to use semicolons; after every statement
 
-#### Case Sensitivity
+### 03.03.04. Case Sensitivity
+
 - JavaScript is a case-sensitive language
 - in Javascript variables, language keywords, function names, and other identifiers must always be typed with a consistent capitalization of letters
 - **Example**: `var firstName='Dinanath';` and `var FirstName='Dinanath';` here `firstName & FirstName` are different ie. two different variable
 
-> **Note**: Take care/precautions while writing variable and function names in JavaScript
+> **Note**: <br/>
+Take care/precautions while writing variable and function names in JavaScript
 
-#### JavaScript Code Blocks
+### 03.03.05. JavaScript Code Blocks
+
 - JavaScript commands/statements/code can be grouped together in code blocks, `inside curly brackets {...}`
 - Grouped statements/lines form code blocks
 - The purpose of code blocks is to define statements to be executed together like a single JavaScript command
 - An often occurrence of a code block in JavaScript is a JavaScript `function`
 
-> **Syntax & Example - .js file**: 
+> **Syntax & Example**: `03.03.05.script.js`
 ```javascript
 // external js file
 // Write all JavaScript code here
@@ -547,41 +579,48 @@ sayHello();
 showTotal();
 ```
 
-### 03.04. JavaScript Keywords
-Usually, JavaScript commands/statements start with a `specific keyword` which defines what `action/function` should the browser will perform/do. 
+03.04. JavaScript Keywords
+---------------------
+
+Usually, JavaScript commands/statements start with a `specific keyword` which defines what `action/function` should the browser will perform/do:
 
 | Keyword           | Keyword          |Keyword           | Keyword          |Keyword           |
 | ------------------|------------------|------------------|------------------|------------------|
 | break             | do ... while     | if ... else      | try ... catch    | const            |
 | continue          | for              | return           | var              | class            |
 | debugger          | function         | switch           | let              | import           |
+| | | | | | 
 
-#### Reserved Keywords
-JavaScript has a number of reserved keywords. These are the words that you cannot use as identifiers (variable names, function names, and loop labels) in your JavaScript programs. The following list shows the keywords that are reserved in `ECMAScript 6`. It also includes keywords that are `reserved for future` as well as keywords that are `disallowed in strict mode`.
+### 03.04.01. Reserved Keywords
+
+JavaScript has several reserved keywords. These are the words that you cannot use as identifiers (variable names, function names, and loop labels) in your JavaScript programs. The following list shows the keywords that are reserved in `ECMAScript 6`. It also includes keywords that are `reserved for future` as well as keywords that are `disallowed in strict mode`.
 - arguments, await, break, case, catch, class, const, continue, debugger, default, delete, do, else, enum, eval, export, extends, false, finally, for, function, if, implements, import, in, instanceof, interface, let, new, null, package, private, protected, public, return, static, super, switch, this, throw, true, try, typeof, var, void, while, with, yield, 
 
-### 03.05. Comments
-- The comments are a meaningful way to `deliver the message` for others/for future reference
+03.05. Comments
+---------------------
+- The comments are a meaningful way to `deliver the message (description to code)` for others/for future reference and to understand/follow the code statements/lines
 - Comments are special lines written for other developers as a reference purpose and browser ignores while interpreting
-- It is used to add information about the code, warnings or suggestions so that end user can easily interpret the code
+- It is used to add information about the code, warnings or suggestions so that end-user can easily interpret the code (`Why and How of code/program/logic`)
 - Comments are used to explain code/programs/statements and to make it more readable for developers
-- Comment is ignored by the JavaScript engine embedded in the browser
+- A comment is ignored by the JavaScript engine embedded in the browser
 - Comments can also be used to prevent the execution of certain logic when testing code
 - Comments can be put into any place of a script, they don’t affect its program execution because the engine simply ignores them
-- Comments help to `make code easy to understand` and `it avoid the unnecessary code`
+- Comments help to `make code easy to understand` and `it avoids the unnecessary code`
 
-#### Types of JavaScript Comments
+### 03.05.01. Types of JavaScript Comments
+
 There are two types of comments in JavaScript:
 1. Single-line Comments
 2. Multi-line Comments
 
-#### 1. Single-line Comments
+#### 03.05.01.01. Single-line Comments
+
 - Single-line JavaScript comments are used for one line of comment only
 - Single-line comments starts with `two forward slash`: **// is single comment**
 - Any statements between `//` till the end of the line will be ignored by JavaScript (not be executed)
 - Single-line comments do not need closure/closing
 
-> **Syntax & Example**: 
+> **Syntax & Example**: `03.05.script.js`
 ```javascript
 // external js file
 // Write all JavaScript code here
@@ -593,7 +632,7 @@ var firstName = 'Dinanath'; // variable to store firstName
 var lastName = 'Jayaswal'; // variable to store lastName
 ```
 
-#### 2. Multi-line Comments
+#### 03.05.01.02. Multi-line Comments
 - Multi-line comments usually comment out a block of code
 - Multi-line comments in JavaScript can comment on bigger parts (a few lines) of code
 - Multi-line comments are more convenient as it can be used to comment single as well as multi-line comments
@@ -601,7 +640,7 @@ var lastName = 'Jayaswal'; // variable to store lastName
 - Multi-line comments need closing
 - Multi-line comments are more often used for `formal documentation`
 
-> **Syntax & Example**: 
+> **Syntax & Example**: `03.05.script.js` 
 ```javascript
 /* show alert box */
 alert('Welcome to JavaScript!');
