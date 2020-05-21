@@ -72,6 +72,7 @@ Topics include
     - 03.04. [JavaScript Keywords](#0304-javascript-keywords)
     - 03.05. [Comments](#0305-Comments)
 4. [JavaScript Language Fundamentals](#section-04-javascript-language-fundamentals)
+    - 04.01. [Generating Output](#0401-generating-output)
 5. [Variables](#section-05-variables)
 6. [Data types](#section-06-data-types)
 7. [Operators](#section-07-operators)
@@ -654,25 +655,28 @@ var lastName = 'Jayaswal'; // variable to store lastName */
 
 Section 04. JavaScript Language Fundamentals
 =====================
-### 04.01. Generating Output
+
+04.01. Generating Output
+---------------------
 - JavaScript does not have any `display or built-in print` functions
-- Many times we may need to generate output from your JavaScript code like `see the value of variable`, or `write a message to browser console` to help you `debug an issue` in your running JavaScript code, and so on
+- Many times we may need to generate output from your JavaScript code like `see the value of a variable`, or `write a message to browser console` to help you `debug an issue` in your running JavaScript code, and so on
 - That is why you have to use the JavaScript output function to generating output `(browser window or browser console dialog boxes, writing output into an HTML element, etc.)`
 - Using different output methods knowledge will help you while debugging or rewriting your code more conveniently
 
-#### Different ways to show output/display data
+### Different ways to show output/display data
+
 1. Writing into an alert box with `alert() or window.alert()`
 2. Writing into browser console with `console.log()`
 3. Writing into the HTML / Browser Window  with `document.write()`
 4. Write into an element of HTML / Inserting Output Inside an HTML Element with `innerHTML`
 
-#### 1. Displaying Output in Alert Dialog Boxes: alert() or window.alert()
+#### 04.01.01. Displaying Output in Alert Dialog Boxes: alert() or window.alert()
 - One can use `alert dialog boxes` to display the message or output data to the user 
 - An alert dialog box is created using the `alert() or window.alert()` method
 - A small pop-up box appears with a closing button to close alert-box
 - This method is great for short and rapid informative messages which can be instantly closed
 
-> **Syntax & Example**: 
+> **Syntax & Example**: `04.01.01.script.js`
 ```javascript
 // external js file
 // Write all JavaScript code here
@@ -681,12 +685,12 @@ alert('I am Dinanath Jayaswal');
 window.alert('We are learning JavaScript');
 ```
 
-#### 2. Writing Output to Browser Console: console.log()
+#### 04.01.02. Writing Output to Browser Console: console.log()
 - Programmers can easily output a message or write data to the browser console using the `console.log()` method
 - `console.log()` function is mainly/widely used for `debugging code` as it makes the JavaScript output print to console
 - This is a simple, easy but very powerful method for generating detailed output
 
-> **Syntax & Example**: 
+> **Syntax & Example**: `04.01.02.script.js`
 ```javascript
 // external js file
 // Write all JavaScript code here
@@ -695,13 +699,14 @@ console.log('I am Dinanath Jayaswal');
 console.log('We are learning JavaScript');
 ```
 
-> **Note**: Use `F12` key on the keyboard to open the `developer tools` then click on the `console tab`. You can write basic JavaScript statements directly in browser console panel/tab and get the output.
+> **Note**: <br/>
+Use `F12` key on the keyboard to open the `developer tools` then click on the `console tab`. You can write basic JavaScript statements directly in the browser console panel/tab and get the output.
 
-#### 3. Writing Output into the HTML / Browser Window: document.write()
+#### 04.01.03. Writing Output into the HTML / Browser Window: document.write()
 - `document.write()` method is used to write the content to the current document while document is being parsed
 - Programmers do ues document.write() for `testing purposes`
 
-> **Syntax & Example**: 
+> **Syntax & Example**: `04.01.03.script.js`
 ```javascript
 // external js file
 // Write all JavaScript code here
@@ -710,13 +715,14 @@ document.write('I am Dinanath Jayaswal');
 document.write('We are learning JavaScript');
 ```
 
-#### 4. Inserting Output Inside an HTML Element: innerHTML
+#### 04.01.04. Inserting Output Inside an HTML Element: innerHTML
 - We can write or insert output inside an HTML element using the element's `innerHTML` property
 - First we need to select the element using a method such as `document.getElementById(id)` 
 
-> **Note**: HTML element manipulating is fully dependent on JavaScript DOM manipulation concepts
+> **Note**: <br/>
+HTML element manipulating is fully dependent on JavaScript DOM manipulation concepts
 
-> **Syntax & Example**: 
+> **Syntax & Example**: `04.01.04.script.js`
 ```javascript
 /// external js file
 // Write all JavaScript code here
@@ -728,7 +734,7 @@ var paraText = document.getElementById('mainParaText');
 paraText.innerHTML = '<strong>This Paragraphic text inserted dynamically through innerHTML method.</strong>';
 ```
 
-With JavaScript we can do many cool and dynamic pieces of stuff (Image Gallery, Games, Forms) but for that one should be familiar with core essentials / building blocks of JavaScript programming language like Variables, Functions, Operators, Loops, Conditional Statements, Array, Objects, Events, DOM (Document Object Model) etc. which will cover in coming lessons.
+With JavaScript, we can do many cool and dynamic pieces of stuff (Image Gallery, Games, Forms) but for that one should be familiar with core essentials/building blocks of JavaScript programming language like Variables, Functions, Operators, Loops, Conditional Statements, Array, Objects, Events, DOM (Document Object Model), etc. which will cover in coming lessons.
 
 Section 05. Variables
 =====================
