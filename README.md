@@ -66,7 +66,7 @@ Topics include
     - 02.09. [Types of Script](#0209-types-of-script) | [Various Scripting languages](#0209-various-scripting-languages) | [Client-Side Scripting Vs Server Side Scripting](#0209-client-side-scripting-vs-server-side-scripting)
     - 02.10. [Prerequisites of using HTML and JavaScript](#0210-prerequisites-of-using-html-and-javascript)
 3. [JavaScript Getting Started](#section-03-javascript-getting-started)
-    - 03.01. [How to write Javascript?](#0301-how-to-write-javascript?) | [JavaScript in HTML](#0301-javascript-in-html)
+    - 03.01. [How to write Javascript?](#0301-how-to-write-javascript) | [JavaScript in HTML](#0301-javascript-in-html)
     - 03.02. [Where to write JavaScript in HTML?](#0302-where-to-write-javascript-in-html) | [Where to embed include write put JavaScript in HTML?](#0302-where-to-embed-include-write-put-javascript-in-html)
     - 03.03. [JavaScript Code structure](#0303-javascript-code-structure)
     - 03.04. [JavaScript Keywords](#0304-javascript-keywords)
