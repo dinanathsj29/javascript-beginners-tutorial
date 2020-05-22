@@ -4173,8 +4173,8 @@ clickButtonElement.removeAttribute('disabled');
 linkTextElement.removeAttribute('href');
 ```
 
-### 14.05.04 Selecting document elements without selectors
-### 14.05.04 Select HTMLCollection without selectors
+### 14.05.04. Selecting document elements without selectors
+### 14.05.04. Select HTMLCollection without selectors
 
 > **Syntax & Example**: 
 ```javascript
