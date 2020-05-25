@@ -3484,7 +3484,9 @@ console.log(Math.floor(Math.random() * 20 + 1)); // random number till 20 withou
 12.11. Date and Time
 =====================
 
-- ???
+- The Date object is used to deal/work with date and time
+- Simply, the JavaScript date object can be used to get date, day, month and year
+- Date objects are created with `new Date()` - Date constructor can be used to create date object, It provides methods to get and set day, month, year, hour, minute and seconds
 
 > **Syntax & Example**: 
 ```javascript
