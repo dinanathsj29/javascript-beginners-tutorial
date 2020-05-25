@@ -3379,9 +3379,11 @@ In JavaScript we have two categories of types:
 12.09. The Window object 
 ---------------------
 
-- Window Object the global variable/global object available in the browser environment
-- ???
-
+- Window Object the global variable/global object `available in the browser environment`, represents the browser window in which the script is running
+- Simply, the window object `represents a window in a browser`
+- The Window interface represents a window containing a DOM (Document Object Model)
+- Window is the object of browser (`The Browser Object Model (BOM)`), it is not the object of javascript
+- The Browser Object Model (BOM) allows JavaScript to "communicate/talk to" the browser
 - In `Browser -> Inspect Element -> Console Panel` -> Type `Window`, check different properties and methods available
 
 > **Syntax & Example**: 
