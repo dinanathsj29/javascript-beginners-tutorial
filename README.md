@@ -3452,7 +3452,8 @@ window.navigator.vendor;
 12.10. The Math Object
 ---------------------
 
-- ???
+- The Math object allows to perform mathematical tasks
+- Math object provides several constants and methods to perform mathematical operation  (like `min, max, sqrt, pi, round, random`, etc)
 
 > **Syntax & Example**: 
 ```javascript
